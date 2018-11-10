@@ -1,5 +1,6 @@
 # site settings
-title: Portfolio
+title: Nikita Martyushevsky
+subtitle: Unity developer
 email: martyushevsky@gmail.com
 baseurl: "/Portfolio" # the subpath of your site, e.g. /blog
 
