@@ -66,7 +66,105 @@ image: assets/images/lights.png
 <br>
 <br>
 <br>
-<a href="PlatformRoyale_WebGL/index.html">Platform Royale</a>
+<br>
+<h1>Platform Royale — Командный проект</h1>
+2D платформер с элементами батлрояля.<br>
+В этом проекте я выполняю роли программиста и дизайнера уровней.<br>
+Можно ознакомиться с <a href="PlatformRoyale_WebGL/index.html">демо проекта Platform Royale</a>
+<h3>Особенности проекта</h3>
+Был реализован поиск путей для ИИ в 2D пространстве с видом сбоку.<br>
+NavMesh работает только в 3D проектах. В ассет сторе имеются решения только для топ-даун 2D проектов.<br>
+За основу был взят алгоритм поиска пути из проекта <a href="https://github.com/tutsplus/A-Star-Pathfinding-for-Platformers">A-Star-Pathfinding-for-Platformers</a><br>
+<br>
+Данный алгоритм работает с битовой картой уровня. Уровень должен быть логически разбит на свободные блоки и блоки препятствий.<br>
+Соответственно был реализован автоматический способ создания такой карты для уже существующих уровней.<br>
+Путь был получен, теперь его нужно было пройти. Для этого был реализован свой контроллер перемещения бота.<br>
+<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prPath.gif" width="1440"></div>
+<br>
+<br>
+Стрельба реализована посредством рейкастов, но с учетом влияния гравитации.<br>
+Траектория выстрела всегда известна. Снаряды реалистично рикошетят от препятствий.<br>
+<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBullets.gif" width="1440"><br>
+<img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBulletsFireworks.gif" width="1440">
+</div>
+<br>
+<br>
+Этот же принцип использован для предсказания траектории полета персонажа, запущенного бустер-платформой.<br>
+Благодаря этому их легко расставлять на уровне и создавать интересные комбинации.<br>
+<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBoosters.gif" width="1440"></div>
+<br>
+<br>
+Безопасная зона со временем сужается.<br>
+<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prZone.gif" width="1440"></div>
+<br>
+<br>
+Персонаж может отталкиваться от стен и выполнять двойной прыжок.<br>
+<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prZone.gif" width="1440"></div>
+<br>
+<br>
+<br>
+<br>
+<h1>Немного кода, программист же</h1>
+Маленький инструмент для переименовывания множества объектов.
+<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/rename.gif" width="720"></div>
+<br>
+<pre><code>
+using UnityEngine;
+using UnityEditor;
+
+public class RenameObjectsWindow : EditorWindow
+{
+    public GameObject SourceGameObject;
+    private Transform[] _objects;
+    private bool _withIndex;
+    private string _objectName = "New Object Name";
+
+    [MenuItem("Examples/Rename Objects")]
+    public static void ShowWindow()
+    {
+        RenameObjectsWindow window = (RenameObjectsWindow)GetWindow(typeof(RenameObjectsWindow), false, "Rename");
+        window.position = new Rect(200, 400, 320, 100);
+        window.Show();
+    }
+
+    void OnGUI()
+    {
+        EditorGUILayout.Space();
+
+        SourceGameObject = EditorGUILayout.ObjectField(
+            "Объект источник", SourceGameObject,
+            typeof(GameObject), true) as GameObject;
+
+        _objectName = EditorGUILayout.TextField("Имя объекта", _objectName);
+
+        _withIndex = EditorGUILayout.Toggle("С индексом", _withIndex);
+        EditorGUILayout.Space();
+
+        if (GUILayout.Button("Переименовать"))
+        {
+            if (SourceGameObject)
+            {
+                _objects = SourceGameObject.GetComponentsInChildren<Transform>();
+                int index = 0;
+                foreach (var obj in _objects)
+                {
+                    if (_withIndex)
+                    {
+                        obj.name = _objectName + " " + index++;
+                    }
+                    else
+                    {
+                        obj.name = _objectName;
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<br>
+<br>
+<br>
 <br>
 <div align="center">Благодарю за внимание!</div>
 <br>
