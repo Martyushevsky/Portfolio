@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "PlatformRoyale",
+"dataUrl": "PlatformRoyale_WebGL.data.unityweb",
+"asmCodeUrl": "PlatformRoyale_WebGL.asm.code.unityweb",
+"asmMemoryUrl": "PlatformRoyale_WebGL.asm.memory.unityweb",
+"asmFrameworkUrl": "PlatformRoyale_WebGL.asm.framework.unityweb",
+"TOTAL_MEMORY": 536870912,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#240E49"
+}
