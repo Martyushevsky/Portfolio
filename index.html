@@ -69,8 +69,8 @@ image: assets/images/lights.png
 Можно запустить демо <a href="PlatformRoyale_WebGL/index.html">Platform Royale</a><br>
 <br>
 <h3>Особенности проекта</h3>
-Был реализован поиск путей для ИИ в 2D пространстве с видом сбоку.<br>
-NavMesh работает только в 3D проектах. В ассет сторе имеются решения только для топ-даун 2D проектов.<br>
+Был реализован поиск пути в 2D пространстве с видом сбоку, имеющем гравитацию.<br>
+NavMesh работает только в 3D проектах. В ассет сторе имеются решения только для 2D проектов с видом сверху.<br>
 За основу был взят алгоритм поиска пути из проекта <a href="https://github.com/tutsplus/A-Star-Pathfinding-for-Platformers">A-Star-Pathfinding-for-Platformers</a><br>
 <br>
 Данный алгоритм работает с битовой картой уровня. Уровень должен быть логически разбит на свободные блоки и блоки препятствий.<br>
@@ -87,7 +87,7 @@ NavMesh работает только в 3D проектах. В ассет ст
 </div>
 <br>
 Этот же принцип использован для предсказания траектории полета персонажа, запущенного бустер-платформой.<br>
-Благодаря этому их легко расставлять на уровне и создавать интересные комбинации.<br>
+Благодаря этому, их легко расставлять на уровне и создавать интересные комбинации.<br>
 <br>
 <div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBoosters.gif" width="1000"></div>
 <br>
@@ -104,7 +104,7 @@ NavMesh работает только в 3D проектах. В ассет ст
 <br>
 <h1>Немного кода, программист же</h1>
 Маленький инструмент для переименовывания множества объектов в Unity.<br>
-Требующие переименовывания объекты нужно сложить в корневой объект. Корневой объект затем помещается в слот окошка.<br>
+Требующие переименования объекты нужно сложить в корневой объект. Корневой объект затем поместить в слот окошка.<br>
 <br>
 <div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/rename.gif" width="720"></div>
 <br>
@@ -118,7 +118,7 @@ public class RenameObjectsWindow : EditorWindow
     private bool _withIndex;
     private string _objectName = "New Object Name";
 
-    [MenuItem("Examples/Rename Objects")]
+    [MenuItem("Tools/Rename Objects")]
     public static void ShowWindow()
     {
         RenameObjectsWindow window = (RenameObjectsWindow)GetWindow(typeof(RenameObjectsWindow), false, "Rename");
