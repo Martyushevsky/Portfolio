@@ -1,112 +1,129 @@
 ---
 layout: post
-title: Избранные проекты
+title: Галерея проектов
 description: Портфолио
 image: assets/images/lights.png
 ---
 
-<div>
+<a href="#chilly">Real Hot Chilly Pixels — Приключение от первого лица. (C веб демо)</a><br>
+<a href="#colors">True Colors — Пазл для мобильных платформ.</a><br>
+<a href="#onestep">One Step Closer — Раннер для VR шлема Fibrum.</a><br>
+<a href="#pr">Platform Royale — Двумерный шутер. Командный проект. (C веб демо)</a><br>
+<a href="#unity">Расширение редактора Unity</a><br>
+<p id="chilly"></p>
 <br>
-<br>
-<h1>Californication — Экшн от первого лица</h1>
-<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/californication.jpg" width="1440"></div>
+<h2>Real Hot Chilly Pixels — Приключение от первого лица.</h2>
+<div align="center"><img src="./Nikita Martyushevsky_files/SCREENS.jpg" width="1280"></div>
+Можно запустить демо <a href="https://martyushevsky.github.io/Portfolio/RealHotChillyPixels_WebGL/index.html">Real Hot Chilly Pixels</a><br>
 <br>
   <ul>
-Задачи проекта:
-   <li>Настройка NavMesh</li>
-   <li>Разработка ИИ</li>
-   <li>Реализация стрельбы посредством Rigidbody</li>
-   <li>Работа с Post-Processing Stack и материалами</li>
-  </ul>
-<p>Цель ботов — искать и атаковать игрока.<br>
-Часть из них патрулирует территорию по заданным точкам. Остальные случайно выбирают точку на навмеше и двигаются к ней.<br>
-Если здоровье бота падает ниже определенного значения, он пытается достичь восстанавливающей камеры.
-<br>
-<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/caliNavMesh.jpg" width="1440"></div>
-<br>
-<br>
-Зеленые боты атакуют только игрока, Красные боты атакуют всех.<br>
-Если игрок отсутствует, все боты атакуют друг друга.<br>
-<br>
-</div>
-
+Благодаря этому проекту я освоил:
+   <li>Работу с камерой. Использование Occlusion Culling и LOD Groups.</li>
+   <li>Настроку Global Illumination. Запекание карт света. Использование Light Probes и Reflection Probes.</li>
+   <li>Работу с Post-Processing Stack v2 и материалами.</li>
+   <li>Настройку NavMesh.</li>
+   <li>Разработку простого ИИ.</li>
+   <li>Реализацию стрельбы посредством прикладывания сил к Rigidbody (этот способ мне не понравился, теперь использую рейкасты).</li>
+   <li>Работу с аудиомикшером, настройку источников звука.</li>
+  </ul>  
 <div align="center">
-<iframe width="1024" height="576" src="https://www.youtube.com/embed/uUSlSHwGEnU" frameborder="0" allowfullscreen></iframe><br>
-<iframe width="1024" height="576" src="https://www.youtube.com/embed/MYmse3a9PAw" frameborder="0" allowfullscreen></iframe><br>
+<img src="./Nikita Martyushevsky_files/SCREENS8.jpg" width="570">&nbsp;
+<img src="./Nikita Martyushevsky_files/SCREENS10.jpg" width="570"><br>
+<img src="./Nikita Martyushevsky_files/lightprobes.gif" width="480"><br>
+<img src="./Nikita Martyushevsky_files/SCREENS0.jpg" width="570">&nbsp;
+<img src="./Nikita Martyushevsky_files/SCREENS3.jpg" width="570"><br>
+<img src="./Nikita Martyushevsky_files/SCREENS4.jpg" width="570">&nbsp;
+<img src="./Nikita Martyushevsky_files/SCREENS6.jpg" width="570"><br>
+<img src="./Nikita Martyushevsky_files/SCREENS7.jpg" width="570">&nbsp;
+<img src="./Nikita Martyushevsky_files/SCREENS5.jpg" width="570"><br>
 </div>
 <br>
+<p>
+Искуственный интеллект имеет базовый функционал — бей или беги.<br>
+Часть ботов патрулирует территорию по заданному маршруту, другие двигаются от одной случайной точки на карте к другой.<br>
+Встретив противника, бот атакует его. Зеленые боты атакуют только игрока, Красный бот атакует всех.<br>
+Если здоровье бота падает ниже определенного значения, он пытается сбежать и добраться до камеры, восстанавливающей здоровье.<br>
+</p>
+<div align="center">
+<iframe width="1280" height="720" src="./Nikita Martyushevsky_files/uUSlSHwGEnU.html" frameborder="0" allowfullscreen=""></iframe><br>
+</div>
 <br>
+<p id="colors"></p>
 <br>
+<h2>Gotta Go Fast</h2>
+Мне было интересно, как быстро я смогу реализовать идею с помощью Юнити. Чтобы испытать себя, я сделал пару небольших игр.<br>
+На превращение пустого проекта в рабочий билд ушло менее четырех часов в обоих случаях.<br>
 <br>
-<h1>Четырехчасовые проекты</h1>
-Эти небольшие проекты — своеобразное испытание / упражнение.<br>
-На каждый ушло менее четырех часов.<br>
+<h4>True Colors — Пазл для мобильных платформ.</h4>
+Цель игры — правильно сопоставлять фигуры по цвету.<br>
+Со временем появляются новые ряды, сгенерированные случайным образом.<br>
+Если игрок совершил ошибку, новый ряд появляется мгновенно. Когда одна из фигур достигает верхней границы поля, игра заканчивается.<br>
 <br>
-<h2>Lucky Strike — Пазл для мобильных платформ</h2>
-Цель игры — сопоставить по цвету как можно больше разноцветных фигур.<br>
-Новые ряды фигур появляются через некоторое время. Ряды генерируются случайным образом.<br>
-Если игрок совершил ошибку, новый ряд появляется мгновенно. Когда любая фигура достигает линии, игра заканчивается.<br>
+<div align="center"><img src="./Nikita Martyushevsky_files/luckyStrike.gif"></div>
+<p id="onestep"></p>
 <br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/luckyStrike.gif"></div>
-<br>
-<h2>One Step Closer — Раннер для VR шлема Fibrum</h2>
+<h4>One Step Closer — Раннер для VR шлема Fibrum.</h4>
 В разработке использован Fibrum SDK для Unity.<br>
 Цель игры — пробежать наибольшее расстояние, уворачиваясь от препятствий.<br>
-Допустимы две ошибки.<br>
 <br>
 Препятствия возникают в случайных точках участка.<br>
-Уровень генерируется по мере продвижения игрока вперед. Уже пройденный участок уровня, очищенный от препятствий, переносится.<br>
-Таким образом память не заполняется мусором.<br>
+Уровень генерируется по мере продвижения игрока. Уже пройденный участок уровня, очищенный от препятствий, переносится вперед.<br>
+Таким образом память не заполняется лишними объектами.<br>
 <br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/oneStepCloser.gif"></div>
+<div align="center"><img src="./Nikita Martyushevsky_files/oneStepCloser.gif"></div>
 <br>
+<p id="pr"></p>
 <br>
-<br>
-<br>
-<h1>Platform Royale — Командный проект</h1>
+<h2>Platform Royale — Двумерный шутер. Командный проект.</h2>
 2D платформер с элементами батлрояля.<br>
-В этом проекте я выполняю роли программиста и дизайнера уровней.<br>
-Можно запустить демо <a href="PlatformRoyale_WebGL/index.html">Platform Royale</a><br>
+В этом проекте я выполнял роли программиста и создателя уровней.<br>
+Можно запустить демо <a href="https://martyushevsky.github.io/Portfolio/PlatformRoyale_WebGL/index.html">Platform Royale</a><br>
 <br>
-<h3>Особенности проекта</h3>
-Был реализован поиск пути в 2D пространстве с видом сбоку, имеющем гравитацию.<br>
+<h4>Особенности проекта</h4>
+Был реализован поиск пути для ботов в 2D пространстве с видом сбоку, имеющем гравитацию.<br>
 NavMesh работает только в 3D проектах. В ассет сторе имеются решения только для 2D проектов с видом сверху.<br>
 За основу был взят алгоритм поиска пути из проекта <a href="https://github.com/tutsplus/A-Star-Pathfinding-for-Platformers">A-Star-Pathfinding-for-Platformers</a><br>
 <br>
 Данный алгоритм работает с битовой картой уровня. Уровень должен быть логически разбит на свободные блоки и блоки препятствий.<br>
-Соответственно был реализован автоматический способ создания такой карты для уже существующих уровней.<br>
-Путь был получен, теперь его нужно было пройти. Для этого был реализован свой контроллер перемещения бота.<br>
+Был реализован автоматический способ создания битовой карты для уже существующих уровней.<br>
+Но получение пути это только половина задачи, его еще нужно пройти. Для этого был создан контроллер перемещения бота, учитывающий особенности строения уровней.<br>
 <br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prPath2.gif" width="1000"></div>
+<div align="center"><img src="./Nikita Martyushevsky_files/prPath2.gif" width="570"></div>
 <br>
-Стрельба реализована посредством рейкастов, но с учетом влияния гравитации.<br>
+Персонаж может отталкиваться от стен и выполнять двойной прыжок.<br>
+<br>
+<div align="center"><img src="./Nikita Martyushevsky_files/prJumps.gif" width="570">
+</div>
+<br>
+Безопасная зона со временем сужается.<br>
+<br>
+<div align="center"><img src="./Nikita Martyushevsky_files/prZone.gif" width="570">
+</div>
+<br>
+Стрельба реализована посредством рейкастов, с учетом влияния гравитации.<br>
 Траектория выстрела всегда известна. Снаряды реалистично рикошетят от препятствий.<br>
 <br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBullets.gif" width="1000"><br>
-<img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBulletsFireworks.gif" width="1000">
+<div align="center">
+<img src="./Nikita Martyushevsky_files/prBullets.gif" width="570">&nbsp;
+<img src="./Nikita Martyushevsky_files/prBulletsFireworks.gif" width="570"><br>
+<!--<img src="./Nikita Martyushevsky_files/prBullets.gif" width="1000"><br>
+<img src="./Nikita Martyushevsky_files/prBulletsFireworks.gif" width="1000">-->
 </div>
 <br>
 Этот же принцип использован для предсказания траектории полета персонажа, запущенного бустер-платформой.<br>
 Благодаря этому, их легко расставлять на уровне и создавать интересные комбинации.<br>
 <br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prBoosters.gif" width="1000"></div>
+<div align="center"><img src="./Nikita Martyushevsky_files/prBoosters.gif" width="1280"></div>
+<p id="unity"></p>
 <br>
-Безопасная зона со временем сужается.<br>
+<h2>Расширение редактора Unity</h2>
+Мне нравится, когда иерархия проекта упорядочена и понятна.<br>
+Одна из вещей, которые нарушают порядок — это множество безымянных однотипных GameObject-ов.<br>
+Устав переименовывать каждый объект по отдельности, я добавил в редактор окно для переименования группы объектов за раз.<br>
+Требующие переименования объекты нужно сложить в корневой объект. Затем корневой объект нужно поместить в слот окошка.<br>
 <br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prZone.gif" width="1000"></div>
+<div align="center"><img src="./Nikita Martyushevsky_files/rename.gif" width="570"></div>
 <br>
-Персонаж может отталкиваться от стен и выполнять двойной прыжок.<br>
-<br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/prJumps.gif" width="1000"></div>
-<br>
-<br>
-<br>
-<br>
-<h1>Немного кода, программист же</h1>
-Маленький инструмент для переименовывания множества объектов в Unity.<br>
-Требующие переименования объекты нужно сложить в корневой объект. Корневой объект затем поместить в слот окошка.<br>
-<br>
-<div align="left"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/rename.gif" width="720"></div>
 <br>
 <pre><code>using UnityEngine;
 using UnityEditor;
@@ -143,7 +160,7 @@ public class RenameObjectsWindow : EditorWindow
         {
             if (SourceGameObject)
             {
-                _objects = SourceGameObject.GetComponentsInChildren<Transform>();
+                _objects = SourceGameObject.GetComponentsInChildren();
                 int index = 0;
                 foreach (var obj in _objects)
                 {
@@ -162,9 +179,7 @@ public class RenameObjectsWindow : EditorWindow
 }
 </code></pre>
 <br>
-<br>
-<br>
-<div align="center">Благодарю за внимание!</div>
-<br>
-<div align="center"><img src="https://raw.githubusercontent.com/Martyushevsky/Portfolio/gh-pages/assets/images/allOfTheLights.gif" width="1440"></div>
-
+<div align="center">
+<h4>Благодарю за внимание!</h4>
+<img src="./Nikita Martyushevsky_files/allOfTheLights.gif" width="1024">
+</div>

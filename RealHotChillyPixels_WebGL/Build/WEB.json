@@ -1,0 +1,12 @@
+{
+"companyName": "PieselWorks",
+"productName": "Real Hot Chilly Pixels",
+"dataUrl": "WEB.data.unityweb",
+"wasmCodeUrl": "WEB.wasm.code.unityweb",
+"wasmFrameworkUrl": "WEB.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFD740"
+}
